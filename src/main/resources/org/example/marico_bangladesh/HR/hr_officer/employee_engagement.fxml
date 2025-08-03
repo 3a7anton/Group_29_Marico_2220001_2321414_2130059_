@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.hr_officer.EmployeeEngagement">
+   <children>
+      <Label layoutX="28.0" layoutY="22.0" text="Employee Engagement">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="535.0" layoutY="26.0" mnemonicParsing="false" text="Back" />
+      <TextField layoutX="28.0" layoutY="63.0" prefWidth="150.0" promptText="Initiative Title" />
+      <DatePicker layoutX="188.0" layoutY="63.0" prefWidth="120.0" promptText="Event Date" />
+      <ComboBox layoutX="318.0" layoutY="63.0" prefWidth="120.0" promptText="Department" />
+      <TextArea layoutX="28.0" layoutY="95.0" prefHeight="50.0" prefWidth="410.0" promptText="Objective" />
+      <Button layoutX="448.0" layoutY="95.0" mnemonicParsing="false" text="Log Initiative" />
+      <Button layoutX="468.0" layoutY="125.0" mnemonicParsing="false" text="View Feedback" />
+      <TableView layoutX="28.0" layoutY="158.0" prefHeight="220.0" prefWidth="540.0">
+        <columns>
+          <TableColumn prefWidth="130.0" text="Initiative" />
+          <TableColumn prefWidth="100.0" text="Date" />
+          <TableColumn prefWidth="110.0" text="Participants" />
+          <TableColumn prefWidth="120.0" text="Department" />
+          <TableColumn prefWidth="80.0" text="Feedback Summary" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

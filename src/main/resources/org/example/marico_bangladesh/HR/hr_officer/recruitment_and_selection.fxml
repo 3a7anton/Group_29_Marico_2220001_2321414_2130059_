@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.RecruitmentAndSelection">
+   <children>
+      <Label layoutX="28.0" layoutY="22.0" text="Recruitment and Selection">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="535.0" layoutY="26.0" mnemonicParsing="false" text="Back" />
+      <TextField layoutX="28.0" layoutY="63.0" text="Job Title" />
+      <TextField layoutX="187.0" layoutY="63.0" text="Vacancy Number" />
+      <ComboBox layoutX="348.0" layoutY="63.0" prefHeight="25.0" prefWidth="109.0" promptText="Department" />
+      <ComboBox layoutX="466.0" layoutY="63.0" prefHeight="25.0" prefWidth="109.0" promptText="Status" />
+      <DatePicker layoutX="103.0" layoutY="95.0" />
+      <Label layoutX="28.0" layoutY="99.0" text="Posting Date:" />
+      <Button layoutX="287.0" layoutY="95.0" mnemonicParsing="false" text="Post Job" />
+      <Button layoutX="480.0" layoutY="97.0" mnemonicParsing="false" text="View Applicant" />
+      <TableView layoutX="28.0" layoutY="138.0" prefHeight="231.0" prefWidth="556.0">
+        <columns>
+          <TableColumn prefWidth="108.0" text="Job Title" />
+            <TableColumn prefWidth="119.0" text="Vacancy Number" />
+          <TableColumn prefWidth="117.0" text="Applicant counts" />
+            <TableColumn prefWidth="98.0" text="Status" />
+            <TableColumn prefWidth="113.0" text="Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
