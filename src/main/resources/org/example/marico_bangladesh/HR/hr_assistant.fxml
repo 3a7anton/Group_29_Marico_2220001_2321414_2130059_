@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.HrAssistant">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
@@ -23,6 +22,7 @@
             <Button layoutX="304.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="157.0" text="Supporting Training" />
             <Button layoutX="222.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="157.0" text="Data Entry Tasks" />
             <Button layoutX="400.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="157.0" text="Misc Admin Support" />
+            <Button layoutX="517.0" layoutY="38.0" mnemonicParsing="false" text="Log out" />
          </children>
       </AnchorPane>
    </children>

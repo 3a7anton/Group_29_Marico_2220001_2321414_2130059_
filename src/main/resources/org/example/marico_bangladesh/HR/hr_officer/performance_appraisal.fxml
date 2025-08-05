@@ -29,8 +29,7 @@
           <TableColumn prefWidth="120.0" text="Employee" />
           <TableColumn prefWidth="80.0" text="Score" />
           <TableColumn prefWidth="120.0" text="Reviewer" />
-          <TableColumn prefWidth="100.0" text="Date" />
-          <TableColumn prefWidth="120.0" text="Remarks" />
+          <TableColumn prefWidth="219.0" text="Remarks" />
         </columns>
       </TableView>
    </children>

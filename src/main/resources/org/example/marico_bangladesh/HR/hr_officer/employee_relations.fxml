@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.EmployeeRelations">
    <children>
       <Label layoutX="32.0" layoutY="35.0" text="Employee Relations">
@@ -24,12 +23,12 @@
       <ComboBox layoutX="32.0" layoutY="118.0" prefWidth="150.0" promptText="Status" />
       <Button layoutX="192.0" layoutY="118.0" mnemonicParsing="false" text="Submit Report" />
       <Button layoutX="295.0" layoutY="118.0" mnemonicParsing="false" text="View History" />
-      <TableView layoutX="31.0" layoutY="165.0" prefHeight="200.0" prefWidth="301.0">
+      <TableView layoutX="31.0" layoutY="165.0" prefHeight="200.0" prefWidth="466.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Issue ID" />
           <TableColumn prefWidth="75.0" text="Employee" />
             <TableColumn prefWidth="75.0" text="Status" />
-            <TableColumn prefWidth="75.0" text="Date" />
+            <TableColumn prefWidth="240.0" text="Description" />
         </columns>
       </TableView>
    </children>

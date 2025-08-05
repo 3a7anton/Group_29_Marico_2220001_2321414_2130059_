@@ -22,8 +22,7 @@
       <DatePicker layoutX="138.0" layoutY="63.0" prefWidth="100.0" promptText="Start Date" />
       <DatePicker layoutX="248.0" layoutY="63.0" prefWidth="100.0" promptText="End Date" />
       <ComboBox layoutX="358.0" layoutY="63.0" prefWidth="100.0" promptText="Leave Type" />
-      <Button layoutX="468.0" layoutY="63.0" mnemonicParsing="false" text="Approve" />
-      <Button layoutX="528.0" layoutY="63.0" mnemonicParsing="false" text="Reject" />
+      <Button layoutX="468.0" layoutY="63.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Add info" />
       <TableView layoutX="28.0" layoutY="105.0" prefHeight="270.0" prefWidth="540.0">
         <columns>
           <TableColumn prefWidth="120.0" text="Employee" />
