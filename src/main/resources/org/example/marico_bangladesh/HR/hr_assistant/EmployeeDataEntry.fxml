@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.HR.hr_assistant.EmployeeDataEntryController">
+   <children>
+      <!-- Header -->
+      <Label layoutX="300.0" layoutY="20.0" text="Employee Data Entry">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      
+      <!-- Input Fields -->
+      <Label layoutX="50.0" layoutY="70.0" text="Employee ID:" />
+      <TextField fx:id="employeeIdField" layoutX="150.0" layoutY="65.0" prefWidth="200.0" promptText="Employee ID" />
+      
+      <Label layoutX="400.0" layoutY="70.0" text="Name:" />
+      <TextField fx:id="nameText" layoutX="450.0" layoutY="65.0" prefWidth="200.0" promptText="Full Name" />
+      
+      <Label layoutX="50.0" layoutY="110.0" text="Address:" />
+      <TextField fx:id="addressText" layoutX="150.0" layoutY="105.0" prefWidth="200.0" promptText="Address" />
+      
+      <Label layoutX="400.0" layoutY="110.0" text="Contact:" />
+      <TextField fx:id="contactText" layoutX="450.0" layoutY="105.0" prefWidth="200.0" promptText="Contact Number" />
+      
+      <Label layoutX="50.0" layoutY="150.0" text="Department:" />
+      <ComboBox fx:id="departmentCombobox" layoutX="150.0" layoutY="145.0" prefWidth="200.0" promptText="Select Department" />
+      
+      <Label layoutX="400.0" layoutY="150.0" text="Position:" />
+      <TextField fx:id="positionField" layoutX="450.0" layoutY="145.0" prefWidth="200.0" promptText="Job Position" />
+      
+      <Label layoutX="50.0" layoutY="190.0" text="Salary:" />
+      <TextField fx:id="salaryField" layoutX="150.0" layoutY="185.0" prefWidth="200.0" promptText="Salary Amount" />
+      
+      <!-- Buttons -->
+      <Button fx:id="addButton" layoutX="50.0" layoutY="230.0" onAction="#addEmployeeInfo" 
+              prefHeight="35.0" prefWidth="100.0" text="Add Employee" />
+      <Button fx:id="updateButton" layoutX="160.0" layoutY="230.0" onAction="#updateEmployee" 
+              prefHeight="35.0" prefWidth="100.0" text="Update" />
+      <Button fx:id="deleteButton" layoutX="270.0" layoutY="230.0" onAction="#deleteEmployee" 
+              prefHeight="35.0" prefWidth="100.0" text="Delete" />
+      <Button fx:id="clearButton" layoutX="380.0" layoutY="230.0" onAction="#clearForm" 
+              prefHeight="35.0" prefWidth="100.0" text="Clear Form" />
+      <Button fx:id="loadButton" layoutX="490.0" layoutY="230.0" onAction="#loadEmployees" 
+              prefHeight="35.0" prefWidth="100.0" text="Load Data" />
+      <Button fx:id="backButton" layoutX="680.0" layoutY="20.0" onAction="#goBack" 
+              prefHeight="35.0" prefWidth="100.0" text="Back to Dashboard" />
+      
+      <!-- Output Label -->
+      <Label fx:id="outputLabel" layoutX="50.0" layoutY="280.0" prefWidth="700.0" style="-fx-text-fill: blue;" />
+      
+      <!-- Employee Table -->
+      <TableView fx:id="tableViewEmployee" layoutX="50.0" layoutY="310.0" prefHeight="260.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="employeeIdCol" prefWidth="100.0" text="Employee ID" />
+          <TableColumn fx:id="nameCol" prefWidth="150.0" text="Name" />
+          <TableColumn fx:id="addressCol" prefWidth="150.0" text="Address" />
+          <TableColumn fx:id="contactCol" prefWidth="120.0" text="Contact" />
+          <TableColumn fx:id="departmentCol" prefWidth="120.0" text="Department" />
+          <TableColumn fx:id="positionCol" prefWidth="100.0" text="Position" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

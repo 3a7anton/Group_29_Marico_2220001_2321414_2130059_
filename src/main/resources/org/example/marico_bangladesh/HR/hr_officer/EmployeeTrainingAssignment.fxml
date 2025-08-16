@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.marico_bangladesh.HR.hr_officer.EmployeeTrainingAssignmentController">
+   <children>
+      <Label layoutX="25.0" layoutY="25.0" text="Employee Training Assignment">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="718.0" layoutY="22.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      
+      <!-- Employee Selection Section -->
+      <Label layoutX="25.0" layoutY="65.0" text="Employee Selection:" />
+      <TextField fx:id="employeeIdTextField" layoutX="25.0" layoutY="85.0" prefWidth="120.0" promptText="Employee ID" />
+      <TextField fx:id="employeeNameTextField" layoutX="155.0" layoutY="85.0" prefWidth="150.0" promptText="Employee Name" />
+      <Button fx:id="searchEmployeeButton" layoutX="315.0" layoutY="85.0" mnemonicParsing="false" onAction="#searchEmployee" text="Search" />
+      
+      <!-- Training Program Selection -->
+      <Label layoutX="25.0" layoutY="125.0" text="Training Program:" />
+      <ComboBox fx:id="trainingProgramComboBox" layoutX="25.0" layoutY="145.0" prefWidth="200.0" promptText="Select Training Program" />
+      <TextField fx:id="trainerTextField" layoutX="235.0" layoutY="145.0" prefWidth="150.0" promptText="Trainer Name" />
+      <TextField fx:id="venueTextField" layoutX="395.0" layoutY="145.0" prefWidth="150.0" promptText="Venue" />
+      
+      <!-- Training Schedule -->
+      <Label layoutX="25.0" layoutY="185.0" text="Training Schedule:" />
+      <DatePicker fx:id="startDatePicker" layoutX="25.0" layoutY="205.0" prefWidth="130.0" promptText="Start Date" />
+      <DatePicker fx:id="endDatePicker" layoutX="165.0" layoutY="205.0" prefWidth="130.0" promptText="End Date" />
+      <TextField fx:id="durationTextField" layoutX="305.0" layoutY="205.0" prefWidth="100.0" promptText="Duration (hrs)" />
+      <ComboBox fx:id="priorityComboBox" layoutX="415.0" layoutY="205.0" prefWidth="130.0" promptText="Priority" />
+      
+      <!-- Training Details -->
+      <Label layoutX="25.0" layoutY="245.0" text="Training Details:" />
+      <TextArea fx:id="trainingDetailsTextArea" layoutX="25.0" layoutY="265.0" prefHeight="60.0" prefWidth="520.0" promptText="Enter training details and objectives" />
+      
+      <!-- Action Buttons -->
+      <Button fx:id="assignTrainingButton" layoutX="25.0" layoutY="340.0" mnemonicParsing="false" onAction="#assignTraining" text="Assign Training" />
+      <Button fx:id="notifyEmployeeButton" layoutX="140.0" layoutY="340.0" mnemonicParsing="false" onAction="#notifyEmployee" text="Notify Employee" />
+      <Button fx:id="saveAssignmentButton" layoutX="270.0" layoutY="340.0" mnemonicParsing="false" onAction="#saveAssignment" text="Save Assignment" />
+      <Button fx:id="clearFieldsButton" layoutX="400.0" layoutY="340.0" mnemonicParsing="false" onAction="#clearFields" text="Clear Fields" />
+      
+      <!-- Output Label -->
+      <Label fx:id="outputLabel" layoutX="560.0" layoutY="265.0" prefHeight="60.0" prefWidth="220.0" text="" />
+      
+      <!-- Training Assignments Table -->
+      <Label layoutX="25.0" layoutY="380.0" text="Training Assignments:" />
+      <TableView fx:id="trainingAssignmentsTableView" layoutX="25.0" layoutY="400.0" prefHeight="180.0" prefWidth="750.0">
+        <columns>
+          <TableColumn fx:id="assignmentIdCol" prefWidth="80.0" text="Assignment ID" />
+          <TableColumn fx:id="empIdCol" prefWidth="80.0" text="Employee ID" />
+          <TableColumn fx:id="empNameCol" prefWidth="120.0" text="Employee Name" />
+          <TableColumn fx:id="trainingProgramCol" prefWidth="140.0" text="Training Program" />
+          <TableColumn fx:id="trainerCol" prefWidth="100.0" text="Trainer" />
+          <TableColumn fx:id="venueCol" prefWidth="80.0" text="Venue" />
+          <TableColumn fx:id="startDateCol" prefWidth="80.0" text="Start Date" />
+          <TableColumn fx:id="endDateCol" prefWidth="70.0" text="End Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

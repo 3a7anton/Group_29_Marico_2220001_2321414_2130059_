@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.FIN.Sales.CustomerOrderController">
+   <children>
+      <Label layoutX="144.0" layoutY="310.0" text="Pending Orders" />
+      <Label fx:id="pendingOrdersLabel" layoutX="158.0" layoutY="352.0" text="Label" />
+      <Label layoutX="376.0" layoutY="310.0" text="Today's Orders" />
+      <Label fx:id="todayOrdersLabel" layoutX="402.0" layoutY="344.0" text="Label" />
+      <Label layoutX="205.0" layoutY="25.0" text="Customer Order" />
+      <Label layoutX="24.0" layoutY="91.0" text="Customer ID:" />
+      <Label layoutX="36.0" layoutY="127.0" text="Product:" />
+      <Label layoutX="27.0" layoutY="174.0" text="Quantity:" />
+      <Label layoutX="21.0" layoutY="221.0" text="Delivery Date:" />
+      <TextField fx:id="customerIdComboBox" layoutX="111.0" layoutY="87.0" />
+      <TextField fx:id="quantityTextField" layoutX="111.0" layoutY="170.0" />
+      <DatePicker fx:id="deliveryDatePicker" layoutX="118.0" layoutY="217.0" />
+      <ComboBox fx:id="productComboBox" layoutX="112.0" layoutY="123.0" prefWidth="150.0" />
+      <Button fx:id="calculateButton" layoutX="364.0" layoutY="87.0" mnemonicParsing="false" text="Calculate Total" />
+      <Button fx:id="saveOrderButton" layoutX="376.0" layoutY="132.0" mnemonicParsing="false" text="Save Order" />
+      <Button fx:id="clearFormButton" layoutX="388.0" layoutY="183.0" mnemonicParsing="false" text="Clear" />
+      <Button fx:id="viewOrdersButton" layoutX="371.0" layoutY="217.0" mnemonicParsing="false" text="View Orders" />
+      <Button fx:id="refreshButton" layoutX="517.0" layoutY="340.0" mnemonicParsing="false" text="Refresh" />
+      <Button fx:id="backToDashboardButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#backToDashboard" text="← Dashboard" />
+      <Label layoutX="84.0" layoutY="50.0" text="New order" />
+   </children>
+</AnchorPane>

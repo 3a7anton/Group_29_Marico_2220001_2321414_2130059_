@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.HR.hr_officer.PerformanceReviewController">
+   <children>
+      <Label layoutX="20.0" layoutY="20.0" text="Performance Review Management" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      
+      <Button fx:id="backButton" layoutX="700.0" layoutY="20.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      
+      <!-- Employee Performance Form -->
+      <Label layoutX="20.0" layoutY="70.0" text="Employee Performance Review" textFill="#34495e">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      
+      <TextField fx:id="employeeIdPerformance" layoutX="20.0" layoutY="100.0" prefWidth="150.0" promptText="Employee ID" />
+      <TextField fx:id="employeeNameField" layoutX="190.0" layoutY="100.0" prefWidth="200.0" promptText="Employee Name" />
+      <Button layoutX="410.0" layoutY="100.0" mnemonicParsing="false" onAction="#searchEmployee" text="Search" />
+      
+      <TextField fx:id="scoreField" layoutX="20.0" layoutY="140.0" prefWidth="100.0" promptText="Score (0-100)" />
+      <TextField fx:id="commentsField" layoutX="140.0" layoutY="140.0" prefWidth="250.0" promptText="Comments" />
+      <ComboBox fx:id="ratingCombobox" layoutX="410.0" layoutY="140.0" prefWidth="120.0" promptText="Rating" />
+      
+      <!-- Action Buttons -->
+      <Button fx:id="addPerformanceButton" layoutX="20.0" layoutY="180.0" mnemonicParsing="false" onAction="#addPerformanceReview" prefWidth="120.0" text="Add Review" />
+      <Button fx:id="updateButton" layoutX="160.0" layoutY="180.0" mnemonicParsing="false" onAction="#updatePerformance" prefWidth="100.0" text="Update" />
+      <Button layoutX="280.0" layoutY="180.0" mnemonicParsing="false" onAction="#clearForm" prefWidth="100.0" text="Clear Form" />
+      <Button layoutX="400.0" layoutY="180.0" mnemonicParsing="false" onAction="#refreshTable" prefWidth="100.0" text="Refresh" />
+      <Button layoutX="520.0" layoutY="180.0" mnemonicParsing="false" onAction="#updateDatabase" prefWidth="120.0" text="Update Database" />
+      
+      <!-- Search -->
+      <TextField fx:id="searchField" layoutX="560.0" layoutY="100.0" prefWidth="150.0" promptText="Search Reviews..." />
+      <Button layoutX="730.0" layoutY="100.0" mnemonicParsing="false" onAction="#searchReviews" text="Search" />
+      
+      <!-- Output Label -->
+      <Label fx:id="outputLabel" layoutX="20.0" layoutY="220.0" prefHeight="20.0" prefWidth="760.0" text="Ready to manage performance reviews..." textFill="#27ae60" />
+      
+      <!-- Performance Reviews Table -->
+      <TableView fx:id="performanceTable" layoutX="20.0" layoutY="260.0" prefHeight="320.0" prefWidth="760.0">
+         <columns>
+            <TableColumn fx:id="employeeIdCol" prefWidth="100.0" text="Employee ID" />
+            <TableColumn fx:id="employeeNameCol" prefWidth="120.0" text="Employee Name" />
+            <TableColumn fx:id="scoreCol" prefWidth="80.0" text="Score" />
+            <TableColumn fx:id="commentsCol" prefWidth="200.0" text="Comments" />
+            <TableColumn fx:id="ratingCol" prefWidth="100.0" text="Rating" />
+            <TableColumn fx:id="reviewDateCol" prefWidth="120.0" text="Review Date" />
+            <TableColumn fx:id="reviewerCol" prefWidth="120.0" text="Reviewer" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

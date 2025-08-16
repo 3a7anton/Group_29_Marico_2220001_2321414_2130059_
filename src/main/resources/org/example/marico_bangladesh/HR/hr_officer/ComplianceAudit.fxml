@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.marico_bangladesh.HR.hr_officer.ComplianceAuditController">
+   <children>
+      <Label layoutX="25.0" layoutY="25.0" text="Compliance Audit">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="668.0" layoutY="22.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      
+      <!-- Employee Records Fetch Section -->
+      <TextField fx:id="employeeSearchTextField" layoutX="25.0" layoutY="65.0" prefWidth="150.0" promptText="Employee ID (Optional)" />
+      <Button fx:id="fetchRecordsButton" layoutX="185.0" layoutY="65.0" mnemonicParsing="false" onAction="#fetchEmployeeRecords" text="Fetch All Records" />
+      
+      <!-- Compliance Check Section -->
+      <ComboBox fx:id="complianceTypeComboBox" layoutX="25.0" layoutY="105.0" prefWidth="180.0" promptText="Select Compliance Type" />
+      <Button fx:id="verifyComplianceButton" layoutX="215.0" layoutY="105.0" mnemonicParsing="false" onAction="#verifyCompliance" text="Verify Compliance" />
+      <Button fx:id="flagNonCompliantButton" layoutX="340.0" layoutY="105.0" mnemonicParsing="false" onAction="#flagNonCompliantRecords" text="Flag Non-Compliant" />
+      <Button fx:id="generateReportButton" layoutX="480.0" layoutY="105.0" mnemonicParsing="false" onAction="#generateAuditReport" text="Generate Report" />
+      
+      <!-- Output Label -->
+      <Label fx:id="outputLabel" layoutX="25.0" layoutY="145.0" prefHeight="25.0" prefWidth="400.0" text="" />
+      
+      <!-- Summary Section -->
+      <Label layoutX="500.0" layoutY="145.0" text="Audit Summary:" />
+      <Label fx:id="totalRecordsLabel" layoutX="500.0" layoutY="170.0" text="Total Records: 0" />
+      <Label fx:id="compliantRecordsLabel" layoutX="500.0" layoutY="190.0" text="Compliant: 0" />
+      <Label fx:id="nonCompliantRecordsLabel" layoutX="500.0" layoutY="210.0" text="Non-Compliant: 0" />
+      
+      <!-- Employee Records Table -->
+      <TableView fx:id="employeeRecordsTableView" layoutX="25.0" layoutY="240.0" prefHeight="150.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="empIdCol" prefWidth="80.0" text="Employee ID" />
+          <TableColumn fx:id="empNameCol" prefWidth="120.0" text="Name" />
+          <TableColumn fx:id="deptCol" prefWidth="100.0" text="Department" />
+          <TableColumn fx:id="positionCol" prefWidth="120.0" text="Position" />
+          <TableColumn fx:id="salaryCol" prefWidth="80.0" text="Salary" />
+          <TableColumn fx:id="joinDateCol" prefWidth="100.0" text="Join Date" />
+          <TableColumn fx:id="complianceStatusCol" prefWidth="100.0" text="Compliance Status" />
+        </columns>
+      </TableView>
+      
+      <!-- Audit Report Table -->
+      <Label layoutX="25.0" layoutY="400.0" text="Audit Report:" />
+      <TableView fx:id="auditReportTableView" layoutX="25.0" layoutY="425.0" prefHeight="115.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="auditEmpIdCol" prefWidth="80.0" text="Employee ID" />
+          <TableColumn fx:id="auditEmpNameCol" prefWidth="120.0" text="Name" />
+          <TableColumn fx:id="complianceTypeCol" prefWidth="150.0" text="Compliance Type" />
+          <TableColumn fx:id="issueCol" prefWidth="200.0" text="Issue" />
+          <TableColumn fx:id="severityCol" prefWidth="80.0" text="Severity" />
+          <TableColumn fx:id="actionRequiredCol" prefWidth="70.0" text="Action Required" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

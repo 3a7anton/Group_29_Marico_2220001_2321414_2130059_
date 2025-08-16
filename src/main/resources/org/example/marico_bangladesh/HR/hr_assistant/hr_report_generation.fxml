@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.marico_bangladesh.HR.hr_assistant.HRReportGenerationController"
+            prefHeight="700.0" prefWidth="1000.0">
+
+   <Label layoutX="400.0" layoutY="30.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="HR Report Generation" />
+   
+   <Label fx:id="outputLabel" layoutX="50.0" layoutY="660.0" prefWidth="900.0" style="-fx-text-fill: red;" />
+
+   <!-- Report Type Selection -->
+   <Label layoutX="50.0" layoutY="80.0" text="Report Type:" />
+   <ComboBox fx:id="reportTypeCombobox" layoutX="150.0" layoutY="75.0" prefWidth="200.0" promptText="Select Report Type" />
+   
+   <!-- Date Range Selection -->
+   <Label layoutX="50.0" layoutY="120.0" text="From Date:" />
+   <DatePicker fx:id="fromDatePicker" layoutX="150.0" layoutY="115.0" prefWidth="150.0" />
+   
+   <Label layoutX="350.0" layoutY="120.0" text="To Date:" />
+   <DatePicker fx:id="toDatePicker" layoutX="420.0" layoutY="115.0" prefWidth="150.0" />
+   
+   <!-- Department Filter -->
+   <Label layoutX="600.0" layoutY="120.0" text="Department:" />
+   <ComboBox fx:id="departmentFilterCombobox" layoutX="700.0" layoutY="115.0" prefWidth="150.0" promptText="All Departments" />
+
+   <!-- Action Buttons -->
+   <Button fx:id="generateReportButton" layoutX="50.0" layoutY="160.0" onAction="#generateReport" 
+           prefHeight="35.0" prefWidth="120.0" text="Generate Report" />
+   
+   <Button fx:id="exportReportButton" layoutX="180.0" layoutY="160.0" onAction="#exportReport" 
+           prefHeight="35.0" prefWidth="100.0" text="Export Report" />
+   
+   <Button fx:id="clearReportButton" layoutX="290.0" layoutY="160.0" onAction="#clearReport" 
+           prefHeight="35.0" prefWidth="80.0" text="Clear" />
+
+   <!-- Report Summary -->
+   <Label layoutX="50.0" layoutY="220.0" style="-fx-font-size: 14; -fx-font-weight: bold;" text="Report Summary" />
+   
+   <Label layoutX="50.0" layoutY="250.0" text="Total Records:" />
+   <Label fx:id="totalRecordsLabel" layoutX="150.0" layoutY="250.0" text="0" />
+   
+   <Label layoutX="250.0" layoutY="250.0" text="Department Count:" />
+   <Label fx:id="departmentCountLabel" layoutX="370.0" layoutY="250.0" text="0" />
+   
+   <Label layoutX="50.0" layoutY="280.0" text="Average Attendance:" />
+   <Label fx:id="avgAttendanceLabel" layoutX="170.0" layoutY="280.0" text="0%" />
+   
+   <Label layoutX="300.0" layoutY="280.0" text="Pending Requests:" />
+   <Label fx:id="pendingRequestsLabel" layoutX="420.0" layoutY="280.0" text="0" />
+
+   <!-- Report Data Table -->
+   <TableView fx:id="reportTable" layoutX="50.0" layoutY="320.0" prefHeight="320.0" prefWidth="900.0">
+      <columns>
+         <TableColumn fx:id="col1" prefWidth="150.0" text="Column 1" />
+         <TableColumn fx:id="col2" prefWidth="150.0" text="Column 2" />
+         <TableColumn fx:id="col3" prefWidth="150.0" text="Column 3" />
+         <TableColumn fx:id="col4" prefWidth="150.0" text="Column 4" />
+         <TableColumn fx:id="col5" prefWidth="150.0" text="Column 5" />
+         <TableColumn fx:id="col6" prefWidth="150.0" text="Column 6" />
+      </columns>
+   </TableView>
+
+   <!-- Back Button -->
+   <Button fx:id="backButton" layoutX="870.0" layoutY="30.0" onAction="#goBack" 
+           prefHeight="30.0" prefWidth="80.0" text="Back" />
+
+</AnchorPane>

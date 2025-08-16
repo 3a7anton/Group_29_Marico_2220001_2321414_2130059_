@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.HR.hr_officer.SalaryStructureUpdateController">
+   <children>
+      <Label layoutX="20.0" layoutY="20.0" text="Salary Structure Update" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      
+      <Button fx:id="backButton" layoutX="800.0" layoutY="20.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      
+      <!-- Employee Information Form -->
+      <Label layoutX="20.0" layoutY="70.0" text="Employee Information" textFill="#34495e">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      
+      <TextField fx:id="employeeIdField" layoutX="20.0" layoutY="100.0" prefWidth="150.0" promptText="Employee ID" />
+      <TextField fx:id="employeeNameField" layoutX="190.0" layoutY="100.0" prefWidth="200.0" promptText="Employee Name" />
+      <ComboBox fx:id="departmentCombobox" layoutX="410.0" layoutY="100.0" prefWidth="150.0" promptText="Department" />
+      
+      <TextField fx:id="positionField" layoutX="20.0" layoutY="140.0" prefWidth="200.0" promptText="Position" />
+      <TextField fx:id="salaryField" layoutX="240.0" layoutY="140.0" prefWidth="150.0" promptText="Salary" />
+      <ComboBox fx:id="statusCombobox" layoutX="410.0" layoutY="140.0" prefWidth="150.0" promptText="Status" />
+      <DatePicker fx:id="startDatePicker" layoutX="580.0" layoutY="140.0" prefWidth="150.0" promptText="Start Date" />
+      
+      <!-- Action Buttons -->
+      <Button fx:id="addEmployeeButton" layoutX="20.0" layoutY="190.0" mnemonicParsing="false" onAction="#addEmployeeButton" prefWidth="120.0" text="Add Employee" />
+      <Button fx:id="updateSalaryButton" layoutX="160.0" layoutY="190.0" mnemonicParsing="false" onAction="#updateSalaryButton" prefWidth="120.0" text="Update Salary" />
+      <Button layoutX="300.0" layoutY="190.0" mnemonicParsing="false" onAction="#clearFields" prefWidth="100.0" text="Clear Form" />
+      <Button layoutX="420.0" layoutY="190.0" mnemonicParsing="false" onAction="#refreshTable" prefWidth="100.0" text="Refresh" />
+      
+      <!-- Search -->
+      <TextField fx:id="searchField" layoutX="550.0" layoutY="190.0" prefWidth="150.0" promptText="Search Employee..." />
+      <Button layoutX="720.0" layoutY="190.0" mnemonicParsing="false" onAction="#searchEmployee" text="Search" />
+      
+      <!-- Output Label -->
+      <Label fx:id="outputLabel" layoutX="20.0" layoutY="230.0" prefHeight="20.0" prefWidth="860.0" text="Ready to manage salary structure..." textFill="#27ae60" />
+      
+      <!-- Employee Table -->
+      <TableView fx:id="employeeTable" layoutX="20.0" layoutY="270.0" prefHeight="400.0" prefWidth="860.0">
+         <columns>
+            <TableColumn fx:id="employeeIdCol" prefWidth="100.0" text="Employee ID" />
+            <TableColumn fx:id="employeeNameCol" prefWidth="150.0" text="Employee Name" />
+            <TableColumn fx:id="departmentCol" prefWidth="120.0" text="Department" />
+            <TableColumn fx:id="positionCol" prefWidth="140.0" text="Position" />
+            <TableColumn fx:id="salaryCol" prefWidth="100.0" text="Salary" />
+            <TableColumn fx:id="statusCol" prefWidth="100.0" text="Status" />
+            <TableColumn fx:id="startDateCol" prefWidth="150.0" text="Start Date" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

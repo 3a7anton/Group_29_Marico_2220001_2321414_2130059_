@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="org.example.marico_bangladesh.HR.hr_assistant.EmployeeFeedBackCollectionController"
+            prefHeight="700.0" prefWidth="1000.0">
+   <children>
+      <!-- Header -->
+      <Label layoutX="400.0" layoutY="20.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Employee Feedback Collection" />
+      
+      <!-- Input Form -->
+      <Label layoutX="50.0" layoutY="70.0" text="Employee ID:" />
+      <TextField fx:id="employeeIdText" layoutX="150.0" layoutY="65.0" prefWidth="200.0" />
+      
+      <Label layoutX="400.0" layoutY="70.0" text="Employee Name:" />
+      <TextField fx:id="employeeNameText" layoutX="520.0" layoutY="65.0" prefWidth="200.0" />
+      
+      <Label layoutX="50.0" layoutY="110.0" text="Feedback Type:" />
+      <ComboBox fx:id="feedbackTypeCombobox" layoutX="150.0" layoutY="105.0" prefWidth="200.0" promptText="Select Type" />
+      
+      <Label layoutX="400.0" layoutY="110.0" text="Department:" />
+      <ComboBox fx:id="departmentCombobox" layoutX="520.0" layoutY="105.0" prefWidth="200.0" promptText="Select Department" />
+      
+      <Label layoutX="50.0" layoutY="150.0" text="Rating (1-5):" />
+      <ComboBox fx:id="ratingCombobox" layoutX="150.0" layoutY="145.0" prefWidth="200.0" promptText="Select Rating" />
+      
+      <Label layoutX="50.0" layoutY="190.0" text="Feedback Content:" />
+      <TextArea fx:id="feedbackContentTextArea" layoutX="50.0" layoutY="210.0" prefHeight="80.0" prefWidth="670.0" />
+      
+      <!-- Buttons -->
+      <Button fx:id="submitButton" layoutX="50.0" layoutY="310.0" onAction="#submitFeedback" 
+              prefHeight="35.0" prefWidth="120.0" text="Submit Feedback" />
+      <Button fx:id="clearButton" layoutX="180.0" layoutY="310.0" onAction="#clearForm" 
+              prefHeight="35.0" prefWidth="100.0" text="Clear Form" />
+      <Button fx:id="loadButton" layoutX="290.0" layoutY="310.0" onAction="#loadFeedback" 
+              prefHeight="35.0" prefWidth="120.0" text="Load Feedback" />
+      <Button fx:id="backButton" layoutX="850.0" layoutY="20.0" onAction="#goBack" 
+              prefHeight="35.0" prefWidth="100.0" text="Back to Dashboard" />
+      
+      <!-- Output Label -->
+      <Label fx:id="outputLabel" layoutX="50.0" layoutY="360.0" prefWidth="670.0" style="-fx-text-fill: blue;" />
+      
+      <!-- Feedback Table -->
+      <TableView fx:id="feedbackTable" layoutX="50.0" layoutY="390.0" prefHeight="280.0" prefWidth="900.0">
+         <columns>
+            <TableColumn fx:id="employeeIdCol" prefWidth="100.0" text="Employee ID" />
+            <TableColumn fx:id="employeeNameCol" prefWidth="150.0" text="Employee Name" />
+            <TableColumn fx:id="feedbackTypeCol" prefWidth="120.0" text="Feedback Type" />
+            <TableColumn fx:id="feedbackContentCol" prefWidth="300.0" text="Content" />
+            <TableColumn fx:id="ratingCol" prefWidth="80.0" text="Rating" />
+            <TableColumn fx:id="dateCol" prefWidth="150.0" text="Date" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

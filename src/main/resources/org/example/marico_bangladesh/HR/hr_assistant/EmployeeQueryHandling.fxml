@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.HR.hr_assistant.EmployeeQueryHandlingController">
+   <children>
+      <Label layoutX="36.0" layoutY="20.0" text="Employee Query Handling">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="720.0" layoutY="20.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+      
+      <!-- Query Form -->
+      <Label layoutX="36.0" layoutY="60.0" text="Query ID:" />
+      <TextField fx:id="queryIdText" layoutX="120.0" layoutY="56.0" prefWidth="150.0" />
+      
+      <Label layoutX="300.0" layoutY="60.0" text="Employee ID:" />
+      <TextField fx:id="employeeIdText" layoutX="390.0" layoutY="56.0" prefWidth="150.0" />
+      
+      <Label layoutX="36.0" layoutY="95.0" text="Employee Name:" />
+      <TextField fx:id="employeeNameText" layoutX="140.0" layoutY="91.0" prefWidth="150.0" />
+      
+      <Label layoutX="300.0" layoutY="95.0" text="Query Type:" />
+      <ComboBox fx:id="queryTypeCombobox" layoutX="380.0" layoutY="91.0" prefWidth="150.0" />
+      
+      <Label layoutX="36.0" layoutY="130.0" text="Subject:" />
+      <TextField fx:id="querySubjectText" layoutX="100.0" layoutY="126.0" prefWidth="200.0" />
+      
+      <Label layoutX="320.0" layoutY="130.0" text="Priority:" />
+      <ComboBox fx:id="priorityCombobox" layoutX="380.0" layoutY="126.0" prefWidth="150.0" />
+      
+      <Label layoutX="36.0" layoutY="165.0" text="Description:" />
+      <TextArea fx:id="queryDescriptionTextArea" layoutX="36.0" layoutY="185.0" prefHeight="60.0" prefWidth="300.0" />
+      
+      <Label layoutX="360.0" layoutY="165.0" text="Response:" />
+      <TextArea fx:id="responseTextArea" layoutX="360.0" layoutY="185.0" prefHeight="60.0" prefWidth="300.0" />
+      
+      <Label layoutX="360.0" layoutY="260.0" text="Status:" />
+      <ComboBox fx:id="statusCombobox" layoutX="420.0" layoutY="256.0" prefWidth="150.0" />
+      
+      <!-- Buttons -->
+      <Button layoutX="36.0" layoutY="290.0" mnemonicParsing="false" onAction="#submitQuery" text="Submit Query" />
+      <Button layoutX="150.0" layoutY="290.0" mnemonicParsing="false" onAction="#updateQueryStatus" text="Update Status" />
+      <Button layoutX="270.0" layoutY="290.0" mnemonicParsing="false" onAction="#clearForm" text="Clear Form" />
+      
+      <!-- Query Table -->
+      <TableView fx:id="queryTable" layoutX="36.0" layoutY="330.0" prefHeight="200.0" prefWidth="720.0">
+        <columns>
+          <TableColumn fx:id="queryIdCol" prefWidth="80.0" text="Query ID" />
+          <TableColumn fx:id="employeeIdCol" prefWidth="90.0" text="Employee ID" />
+          <TableColumn fx:id="employeeNameCol" prefWidth="120.0" text="Employee Name" />
+          <TableColumn fx:id="queryTypeCol" prefWidth="90.0" text="Type" />
+          <TableColumn fx:id="subjectCol" prefWidth="120.0" text="Subject" />
+          <TableColumn fx:id="priorityCol" prefWidth="80.0" text="Priority" />
+          <TableColumn fx:id="statusCol" prefWidth="80.0" text="Status" />
+          <TableColumn fx:id="submissionDateCol" prefWidth="80.0" text="Date" />
+        </columns>
+      </TableView>
+      
+      <Label fx:id="outputLabel" layoutX="36.0" layoutY="550.0" prefHeight="20.0" prefWidth="700.0" textFill="BLUE" />
+   </children>
+</AnchorPane>

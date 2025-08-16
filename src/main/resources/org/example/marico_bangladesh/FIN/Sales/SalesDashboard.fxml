@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.FIN.Sales.SalesDashboardController">
+   <children>
+      <Label layoutX="27.0" layoutY="27.0" text="Welcome Sales Officer">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="customerOrderButton" layoutX="27.0" layoutY="73.0" mnemonicParsing="false" onAction="#customerOrderButton" prefHeight="25.0" prefWidth="120.0" text="Customer Order" />
+      <Button fx:id="generateLeadsButton" layoutX="27.0" layoutY="110.0" mnemonicParsing="false" onAction="#generateLeadsButton" text="Generate Leads" />
+      <Button fx:id="salesPerformanceButton" layoutX="27.0" layoutY="142.0" mnemonicParsing="false" onAction="#salesPerformanceButton" text="Sales Performance" />
+      <Button fx:id="salesContractButton" layoutX="27.0" layoutY="175.0" mnemonicParsing="false" onAction="#salesContractButton" text="Sales Contract" />
+      <Button fx:id="salesTargetButton" layoutX="27.0" layoutY="212.0" mnemonicParsing="false" onAction="#salesTargetButton" text="Sales Target" />
+      <Button fx:id="logoutButton" layoutX="480.0" layoutY="27.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="32.0" prefWidth="80.0" text="Logout" />
+   </children>
+</AnchorPane>

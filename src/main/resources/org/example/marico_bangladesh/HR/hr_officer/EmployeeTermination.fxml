@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.HR.hr_officer.EmployeeTerminationController">
+   <children>
+      <Label layoutX="25.0" layoutY="25.0" text="Employee Termination">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="618.0" layoutY="22.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      
+      <!-- Employee Search Section -->
+      <TextField fx:id="employeeIdTextField" layoutX="25.0" layoutY="65.0" prefHeight="25.0" prefWidth="128.0" promptText="Employee ID" />
+      <TextField fx:id="employeeNameTextField" layoutX="160.0" layoutY="65.0" prefHeight="25.0" prefWidth="168.0" promptText="Employee Name" />
+      <Button fx:id="fetchRecordsButton" layoutX="340.0" layoutY="65.0" mnemonicParsing="false" onAction="#fetchEmployeeRecords" text="Fetch Records" />
+      <Button fx:id="searchButton" layoutX="460.0" layoutY="65.0" mnemonicParsing="false" onAction="#searchEmployee" text="Search" />
+      
+      <!-- Termination Details Section -->
+      <Label layoutX="25.0" layoutY="105.0" text="Termination Details:" />
+      <DatePicker fx:id="terminationDatePicker" layoutX="25.0" layoutY="130.0" prefWidth="150.0" promptText="Termination Date" />
+      <ComboBox fx:id="terminationReasonComboBox" layoutX="185.0" layoutY="130.0" prefWidth="180.0" promptText="Termination Reason" />
+      <TextArea fx:id="terminationNotesTextArea" layoutX="375.0" layoutY="130.0" prefHeight="60.0" prefWidth="250.0" promptText="Additional Notes" />
+      <ComboBox fx:id="terminationStatusComboBox" layoutX="25.0" layoutY="200.0" prefWidth="150.0" promptText="Status" />
+      <Button fx:id="updateTerminationButton" layoutX="185.0" layoutY="200.0" mnemonicParsing="false" onAction="#updateTerminationStatus" text="Update Status" />
+      <Button fx:id="clearFormButton" layoutX="295.0" layoutY="200.0" mnemonicParsing="false" onAction="#clearForm" text="Clear Form" />
+      
+      <!-- Output Label -->
+      <Label fx:id="outputLabel" layoutX="420.0" layoutY="200.0" prefHeight="25.0" prefWidth="250.0" text="" textFill="BLUE" />
+      
+      <!-- Table View for Employee Termination Records -->
+      <TableView fx:id="terminationTableView" layoutX="25.0" layoutY="240.0" prefHeight="240.0" prefWidth="650.0">
+        <columns>
+          <TableColumn fx:id="empIdCol" prefWidth="80.0" text="Employee ID" />
+          <TableColumn fx:id="empNameCol" prefWidth="120.0" text="Name" />
+          <TableColumn fx:id="terminationDateCol" prefWidth="100.0" text="Termination Date" />
+          <TableColumn fx:id="reasonCol" prefWidth="150.0" text="Reason" />
+          <TableColumn fx:id="notesCol" prefWidth="150.0" text="Notes" />
+          <TableColumn fx:id="statusCol" prefWidth="50.0" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.HR.hr_assistant.LeaveRequestSubmissionController">
+   <children>
+      <Label layoutX="20.0" layoutY="20.0" text="Leave Request Submission" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      
+      <Button layoutX="700.0" layoutY="20.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+      
+      <!-- Employee Information -->
+      <Label layoutX="20.0" layoutY="70.0" text="Employee Information" textFill="#34495e">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      
+      <TextField fx:id="employeeIdText" layoutX="20.0" layoutY="100.0" prefWidth="150.0" promptText="Employee ID" />
+      <TextField fx:id="employeeNameText" layoutX="190.0" layoutY="100.0" prefWidth="200.0" promptText="Employee Name" />
+      
+      <!-- Leave Details -->
+      <Label layoutX="20.0" layoutY="150.0" text="Leave Details" textFill="#34495e">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      
+      <ComboBox fx:id="leaveTypeCombobox" layoutX="20.0" layoutY="180.0" prefWidth="150.0" promptText="Leave Type" />
+      <DatePicker fx:id="startDatePicker" layoutX="190.0" layoutY="180.0" prefWidth="150.0" promptText="Start Date" />
+      <DatePicker fx:id="endDatePicker" layoutX="360.0" layoutY="180.0" prefWidth="150.0" promptText="End Date" />
+      
+      <Label layoutX="20.0" layoutY="220.0" text="Reason for Leave:" />
+      <TextArea fx:id="reasonTextArea" layoutX="20.0" layoutY="240.0" prefHeight="80.0" prefWidth="500.0" promptText="Enter reason for leave..." />
+      
+      <!-- Action Buttons -->
+      <Button layoutX="20.0" layoutY="340.0" mnemonicParsing="false" onAction="#checkEligibleForLeave" text="Check Eligibility" />
+      <Button layoutX="150.0" layoutY="340.0" mnemonicParsing="false" onAction="#submitLeaveRequest" text="Submit Request" />
+      <Button layoutX="280.0" layoutY="340.0" mnemonicParsing="false" onAction="#submitRequestToHrOfficer" text="Submit to HR Officer" />
+      <Button layoutX="450.0" layoutY="340.0" mnemonicParsing="false" onAction="#clearForm" text="Clear Form" />
+      
+      <!-- Search -->
+      <TextField fx:id="searchText" layoutX="550.0" layoutY="100.0" prefWidth="150.0" promptText="Search..." />
+      <Button layoutX="720.0" layoutY="100.0" mnemonicParsing="false" onAction="#searchLeaveRequest" text="Search" />
+      
+      <!-- Output Label -->
+      <Label fx:id="outputLabel" layoutX="20.0" layoutY="380.0" prefHeight="20.0" prefWidth="760.0" text="Ready to submit leave request..." textFill="#27ae60" />
+      
+      <!-- Table View -->
+      <TableView fx:id="leaveRequestTable" layoutX="20.0" layoutY="420.0" prefHeight="160.0" prefWidth="760.0">
+         <columns>
+            <TableColumn fx:id="employeeIdCol" prefWidth="80.0" text="Employee ID" />
+            <TableColumn fx:id="employeeNameCol" prefWidth="120.0" text="Employee Name" />
+            <TableColumn fx:id="leaveTypeCol" prefWidth="100.0" text="Leave Type" />
+            <TableColumn fx:id="startDateCol" prefWidth="100.0" text="Start Date" />
+            <TableColumn fx:id="endDateCol" prefWidth="100.0" text="End Date" />
+            <TableColumn fx:id="reasonCol" prefWidth="120.0" text="Reason" />
+            <TableColumn fx:id="statusCol" prefWidth="80.0" text="Status" />
+            <TableColumn fx:id="requestDateCol" prefWidth="100.0" text="Request Date" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

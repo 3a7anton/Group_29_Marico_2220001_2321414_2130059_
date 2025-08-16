@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.marico_bangladesh.HR.hr_assistant.AttendanceTrackingController"
+            prefHeight="700.0" prefWidth="900.0">
+
+   <Label layoutX="350.0" layoutY="30.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Attendance Tracking" />
+   
+   <Label fx:id="outputLabel" layoutX="50.0" layoutY="660.0" prefWidth="800.0" style="-fx-text-fill: red;" />
+
+   <!-- Attendance Form -->
+   <Label layoutX="50.0" layoutY="80.0" text="Employee ID:" />
+   <TextField fx:id="employeeIdText" layoutX="150.0" layoutY="75.0" prefWidth="150.0" promptText="Enter Employee ID" />
+   
+   <Label layoutX="50.0" layoutY="120.0" text="Employee Name:" />
+   <TextField fx:id="employeeNameText" layoutX="150.0" layoutY="115.0" prefWidth="200.0" promptText="Enter Employee Name" />
+   
+   <Label layoutX="400.0" layoutY="80.0" text="Date:" />
+   <DatePicker fx:id="datePicker" layoutX="450.0" layoutY="75.0" prefWidth="150.0" />
+   
+   <Label layoutX="50.0" layoutY="160.0" text="Check-in Time:" />
+   <TextField fx:id="checkInTimeText" layoutX="150.0" layoutY="155.0" prefWidth="100.0" promptText="HH:MM" />
+   
+   <Label layoutX="300.0" layoutY="160.0" text="Check-out Time:" />
+   <TextField fx:id="checkOutTimeText" layoutX="400.0" layoutY="155.0" prefWidth="100.0" promptText="HH:MM" />
+   
+   <Label layoutX="550.0" layoutY="160.0" text="Status:" />
+   <ComboBox fx:id="statusCombobox" layoutX="600.0" layoutY="155.0" prefWidth="120.0" promptText="Select Status" />
+
+   <!-- Action Buttons -->
+   <Button fx:id="markAttendanceButton" layoutX="50.0" layoutY="200.0" onAction="#markAttendance" 
+           prefHeight="35.0" prefWidth="120.0" text="Mark Attendance" />
+   
+   <Button fx:id="updateAttendanceButton" layoutX="180.0" layoutY="200.0" onAction="#updateAttendance" 
+           prefHeight="35.0" prefWidth="120.0" text="Update Attendance" />
+   
+   <Button fx:id="clearFormButton" layoutX="310.0" layoutY="200.0" onAction="#clearForm" 
+           prefHeight="35.0" prefWidth="80.0" text="Clear" />
+
+   <!-- Search Section -->
+   <Label layoutX="450.0" layoutY="205.0" text="Search:" />
+   <TextField fx:id="searchText" layoutX="510.0" layoutY="200.0" prefWidth="150.0" promptText="Search by ID/Name" />
+   <Button fx:id="searchButton" layoutX="670.0" layoutY="200.0" onAction="#searchAttendance" 
+           prefHeight="30.0" prefWidth="60.0" text="Search" />
+   <Button fx:id="resetButton" layoutX="740.0" layoutY="200.0" onAction="#resetFilter" 
+           prefHeight="30.0" prefWidth="60.0" text="Reset" />
+
+   <!-- Filter by Date -->
+   <Label layoutX="50.0" layoutY="250.0" text="Filter by Date:" />
+   <DatePicker fx:id="filterDatePicker" layoutX="150.0" layoutY="245.0" prefWidth="150.0" />
+   <Button fx:id="filterByDateButton" layoutX="310.0" layoutY="245.0" onAction="#filterByDate" 
+           prefHeight="30.0" prefWidth="100.0" text="Filter by Date" />
+
+   <!-- Attendance Table -->
+   <TableView fx:id="attendanceTable" layoutX="50.0" layoutY="290.0" prefHeight="350.0" prefWidth="800.0">
+      <columns>
+         <TableColumn fx:id="employeeIdCol" prefWidth="100.0" text="Employee ID" />
+         <TableColumn fx:id="employeeNameCol" prefWidth="120.0" text="Employee Name" />
+         <TableColumn fx:id="dateCol" prefWidth="100.0" text="Date" />
+         <TableColumn fx:id="checkInTimeCol" prefWidth="100.0" text="Check-in Time" />
+         <TableColumn fx:id="checkOutTimeCol" prefWidth="100.0" text="Check-out Time" />
+         <TableColumn fx:id="hoursWorkedCol" prefWidth="100.0" text="Hours Worked" />
+         <TableColumn fx:id="statusCol" prefWidth="100.0" text="Status" />
+      </columns>
+   </TableView>
+
+   <!-- Back Button -->
+   <Button fx:id="backButton" layoutX="750.0" layoutY="30.0" onAction="#goBack" 
+           prefHeight="30.0" prefWidth="80.0" text="Back" />
+
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+
+<AnchorPane prefHeight="501.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.FIN.Business_analytics.ForecastDemandController">
+   <children>
+      <Label layoutX="222.0" layoutY="14.0" text="Demand Forecast Analysis" />
+      <Label layoutX="32.0" layoutY="70.0" text="Product Category:" />
+      <Label layoutX="32.0" layoutY="105.0" text="Start Date:" />
+      <Label layoutX="292.0" layoutY="62.0" text="Forecast Model:" />
+      <ComboBox fx:id="productCategoryComboBox" layoutX="128.0" layoutY="65.0" prefWidth="150.0" />
+      <DatePicker fx:id="startDatePicker" layoutX="96.0" layoutY="101.0" />
+      <ComboBox fx:id="forecastModelComboBox" layoutX="398.0" layoutY="58.0" prefWidth="150.0" />
+      <ComboBox fx:id="forecastPeriodComboBox" layoutX="426.0" layoutY="101.0" prefWidth="150.0" />
+      <Label layoutX="319.0" layoutY="105.0" text="Forecast Period:" />
+      <Label layoutX="48.0" layoutY="416.0" text="Forecast Accuracy:" />
+      <Label fx:id="accuracyLabel" layoutX="171.0" layoutY="416.0" text="N/A" />
+      <Button fx:id="backToDashboardButton" layoutX="44.0" layoutY="448.0" mnemonicParsing="false" onAction="#backToDashboard" text="← Back to Dashboard" />
+      <Button fx:id="saveForecastButton" layoutX="362.0" layoutY="442.0" mnemonicParsing="false" text="Save Forecast" />
+      <Button fx:id="exportChartButton" layoutX="480.0" layoutY="442.0" mnemonicParsing="false" text="Export Chart" />
+      <TextArea fx:id="forecastSummaryTextArea" layoutX="399.0" layoutY="264.0" prefHeight="159.0" prefWidth="162.0" />
+      <Label layoutX="400.0" layoutY="236.0" text="Forecast Summary:" />
+      <Button fx:id="runForecastButton" layoutX="227.0" layoutY="181.0" mnemonicParsing="false" text="Run Forecast" />
+      <Button fx:id="clearButton" layoutX="356.0" layoutY="181.0" mnemonicParsing="false" text="Clear" />
+      <DatePicker fx:id="endDatePicker" layoutX="95.0" layoutY="144.0" />
+      <Label layoutX="32.0" layoutY="149.0" text="End Date:" />
+      <Line endX="100.0" startX="-100.0" />
+      <LineChart fx:id="forecastChart" layoutX="57.0" layoutY="220.0" prefHeight="179.0" prefWidth="324.0" titleSide="BOTTOM">
+        <xAxis>
+          <CategoryAxis label="Time Period" side="LEFT" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

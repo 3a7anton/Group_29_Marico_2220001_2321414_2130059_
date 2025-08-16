@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.HR.hr_officer.LeaveApprovalController">
+   <children>
+      <Label layoutX="20.0" layoutY="20.0" text="Leave Approval Management" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      
+      <Button fx:id="backButton" layoutX="700.0" layoutY="20.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      
+      <!-- Action Buttons -->
+      <Button fx:id="approveButton" layoutX="20.0" layoutY="70.0" mnemonicParsing="false" onAction="#approveLeave" prefWidth="100.0" text="Approve" />
+      <Button fx:id="rejectButton" layoutX="140.0" layoutY="70.0" mnemonicParsing="false" onAction="#rejectLeave" prefWidth="100.0" text="Reject" />
+      <Button fx:id="updateButton" layoutX="260.0" layoutY="70.0" mnemonicParsing="false" onAction="#updateDatabase" prefWidth="120.0" text="Update Database" />
+      <Button layoutX="400.0" layoutY="70.0" mnemonicParsing="false" onAction="#refreshTable" prefWidth="100.0" text="Refresh" />
+      
+      <!-- Search -->
+      <TextField fx:id="searchField" layoutX="520.0" layoutY="70.0" prefWidth="150.0" promptText="Search Employee..." />
+      <Button layoutX="690.0" layoutY="70.0" mnemonicParsing="false" onAction="#searchLeave" text="Search" />
+      
+      <!-- Output Label -->
+      <Label fx:id="outputLabel" layoutX="20.0" layoutY="110.0" prefHeight="20.0" prefWidth="760.0" text="Select a leave request to approve or reject..." textFill="#27ae60" />
+      
+      <!-- Leave Requests Table -->
+      <TableView fx:id="tableViewLeaveApproval" layoutX="20.0" layoutY="150.0" prefHeight="420.0" prefWidth="760.0">
+         <columns>
+            <TableColumn fx:id="employeeIdCol" prefWidth="100.0" text="Employee ID" />
+            <TableColumn fx:id="employeeNameCol" prefWidth="120.0" text="Employee Name" />
+            <TableColumn fx:id="leaveTypeCol" prefWidth="100.0" text="Leave Type" />
+            <TableColumn fx:id="startDateCol" prefWidth="100.0" text="Start Date" />
+            <TableColumn fx:id="endDateCol" prefWidth="100.0" text="End Date" />
+            <TableColumn fx:id="reasonCol" prefWidth="140.0" text="Reason" />
+            <TableColumn fx:id="statusCol" prefWidth="100.0" text="Status" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

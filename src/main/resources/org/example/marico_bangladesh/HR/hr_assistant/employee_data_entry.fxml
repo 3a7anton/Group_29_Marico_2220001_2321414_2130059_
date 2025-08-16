@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.marico_bangladesh.HR.hr_assistant.EmployeeDataEntryController"
+            prefHeight="700.0" prefWidth="900.0">
+
+   <Label layoutX="350.0" layoutY="30.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Employee Data Entry" />
+   
+   <Label fx:id="outputLabel" layoutX="50.0" layoutY="660.0" prefWidth="800.0" style="-fx-text-fill: red;" />
+
+   <!-- Employee Form -->
+   <Label layoutX="50.0" layoutY="80.0" text="Employee ID:" />
+   <TextField fx:id="employeeIdText" layoutX="150.0" layoutY="75.0" prefWidth="150.0" promptText="Enter Employee ID" />
+   
+   <Label layoutX="50.0" layoutY="120.0" text="Name:" />
+   <TextField fx:id="nameText" layoutX="150.0" layoutY="115.0" prefWidth="200.0" promptText="Enter Full Name" />
+   
+   <Label layoutX="50.0" layoutY="160.0" text="Email:" />
+   <TextField fx:id="emailText" layoutX="150.0" layoutY="155.0" prefWidth="200.0" promptText="Enter Email" />
+   
+   <Label layoutX="400.0" layoutY="80.0" text="Contact:" />
+   <TextField fx:id="contactText" layoutX="480.0" layoutY="75.0" prefWidth="150.0" promptText="Enter Contact" />
+   
+   <Label layoutX="400.0" layoutY="120.0" text="Address:" />
+   <TextField fx:id="addressText" layoutX="480.0" layoutY="115.0" prefWidth="200.0" promptText="Enter Address" />
+   
+   <Label layoutX="400.0" layoutY="160.0" text="Department:" />
+   <ComboBox fx:id="departmentCombobox" layoutX="480.0" layoutY="155.0" prefWidth="150.0" promptText="Select Department" />
+   
+   <Label layoutX="50.0" layoutY="200.0" text="Position:" />
+   <TextField fx:id="positionText" layoutX="150.0" layoutY="195.0" prefWidth="200.0" promptText="Enter Position" />
+   
+   <Label layoutX="400.0" layoutY="200.0" text="Salary:" />
+   <TextField fx:id="salaryText" layoutX="480.0" layoutY="195.0" prefWidth="150.0" promptText="Enter Salary" />
+
+   <!-- Action Buttons -->
+   <Button fx:id="addEmployeeButton" layoutX="50.0" layoutY="240.0" onAction="#addEmployeeInfo" 
+           prefHeight="35.0" prefWidth="100.0" text="Add Employee" />
+   
+   <Button fx:id="updateEmployeeButton" layoutX="160.0" layoutY="240.0" onAction="#updateEmployeeInfo" 
+           prefHeight="35.0" prefWidth="100.0" text="Update Employee" />
+   
+   <Button fx:id="deleteEmployeeButton" layoutX="270.0" layoutY="240.0" onAction="#deleteEmployeeInfo" 
+           prefHeight="35.0" prefWidth="100.0" text="Delete Employee" />
+   
+   <Button fx:id="clearFormButton" layoutX="380.0" layoutY="240.0" onAction="#clearForm" 
+           prefHeight="35.0" prefWidth="80.0" text="Clear" />
+
+   <!-- Search Section -->
+   <Label layoutX="500.0" layoutY="245.0" text="Search:" />
+   <TextField fx:id="searchText" layoutX="560.0" layoutY="240.0" prefWidth="150.0" promptText="Search by name/ID" />
+   <Button fx:id="searchButton" layoutX="720.0" layoutY="240.0" onAction="#searchEmployee" 
+           prefHeight="30.0" prefWidth="60.0" text="Search" />
+   <Button fx:id="resetButton" layoutX="790.0" layoutY="240.0" onAction="#resetFilter" 
+           prefHeight="30.0" prefWidth="60.0" text="Reset" />
+
+   <!-- Employee Table -->
+   <TableView fx:id="tableViewEmployee" layoutX="50.0" layoutY="290.0" prefHeight="350.0" prefWidth="800.0">
+      <columns>
+         <TableColumn fx:id="employeeIdCol" prefWidth="100.0" text="Employee ID" />
+         <TableColumn fx:id="nameCol" prefWidth="120.0" text="Name" />
+         <TableColumn fx:id="emailCol" prefWidth="150.0" text="Email" />
+         <TableColumn fx:id="contactCol" prefWidth="100.0" text="Contact" />
+         <TableColumn fx:id="addressCol" prefWidth="120.0" text="Address" />
+         <TableColumn fx:id="departmentCol" prefWidth="100.0" text="Department" />
+         <TableColumn fx:id="positionCol" prefWidth="100.0" text="Position" />
+         <TableColumn fx:id="salaryCol" prefWidth="80.0" text="Salary" />
+         <TableColumn fx:id="joiningDateCol" prefWidth="100.0" text="Joining Date" />
+         <TableColumn fx:id="statusCol" prefWidth="80.0" text="Status" />
+      </columns>
+   </TableView>
+
+   <!-- Back Button -->
+   <Button fx:id="backButton" layoutX="750.0" layoutY="30.0" onAction="#goBack" 
+           prefHeight="30.0" prefWidth="80.0" text="Back" />
+
+</AnchorPane>
