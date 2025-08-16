@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.marico_bangladesh.inventory_manager.UpdateStockQuantityController">
+   <children>
+      <Label layoutX="28.0" layoutY="22.0" text="Update Stock Quantity">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="535.0" layoutY="26.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+      
+      <VBox layoutX="28.0" layoutY="70.0" spacing="20.0">
+         <children>
+            <HBox spacing="15.0">
+               <children>
+                  <Label prefWidth="100.0" text="Product ID:" />
+                  <TextField fx:id="productIdField" prefWidth="200.0" promptText="Enter Product ID" />
+               </children>
+            </HBox>
+            <HBox spacing="15.0">
+               <children>
+                  <Label prefWidth="100.0" text="Update Type:" />
+                  <ComboBox fx:id="updateTypeComboBox" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox spacing="15.0">
+               <children>
+                  <Label prefWidth="100.0" text="New Quantity:" />
+                  <TextField fx:id="quantityField" prefWidth="200.0" promptText="Enter New Quantity" />
+               </children>
+            </HBox>
+            <HBox spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleSearch" text="Validate" />
+                  <Button mnemonicParsing="false" onAction="#handleUpdate" text="Save" />
+                  <Button mnemonicParsing="false" onAction="#handleClear" text="Clear" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      
+      <Label fx:id="currentStockLabel" layoutX="28.0" layoutY="250.0" prefHeight="20.0" prefWidth="540.0" text="" />
+      <Label fx:id="messageLabel" layoutX="28.0" layoutY="280.0" prefHeight="80.0" prefWidth="540.0" text="Status: Ready to update stock quantities. Please enter Product ID and new quantity, then validate before saving." wrapText="true" />
+   </children>
+</AnchorPane>
